@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="myprofile.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <!---------------------------------topx navigation bar--------------------->
+
+  <div class="topbar">
+    <h1>AboutMe</h1>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.pdf">Resume</a>
+    <a href="#contact" class="email-button">Contact</a>
+  </div>
+
+  <section class="hero-section">
+    <div class="My_info">
+      <div class="Oinfo">
+        <h3 style="color: rgb(139, 139, 141);"><b>Hello,Welcome</b></h3>
+        <h2 style="color: rgb(252, 252, 252); font-size: 350%;"><b>Hi, I'm Aditya Vajale</b> </h2>
+        <p2 style="font-size: larger;">Aspiring <b style="color: rgb(240, 60, 0);">Java Developer </b>& Content Creator
+        </p2>
+        <p3>Turning ideas into reality with <b style="color: rgb(240, 60, 0);">Java</b>,<b
+            style="color: rgb(240, 60, 0);">SQL</b>, and design thinking.</p3>
+      </div>
+
+
+
+      <!-- Inside your Skills section -->
+      <div class="skill-icon">
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="90"
+          title="Java" class="img1" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="90"
+          title="HTML5" class="img2" />
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="90"
+          title="CSS3" class="img3" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="90"
+          title="GitHub" class="4" />
+      </div>
+    </div>
+  </section>
+
+<!-- about -->
+  <section >
+    <div class="About-me">
+     <h2>About ME</h2>
+     <img src="profile_logo.png">
+     <p>I am a Software Developer with a B.E. in Computer Engineering from SPPU. I have experience working on projects involving Java, Spring Boot, Angular, and full-stack development, and I am passionate about building practical solutions and continuously learning new technologies.</p>
+    </div>
+  </section>
+
+  <!-- projects section -->
+  <section id="projects" class="project-section">
+    <h2 class="section-title">Projects</h2>
+    <div class="filter-btn" style="text-align: center;padding-bottom: 30px;">
+      <label>Filter:</label>
+      <button onclick="filterProjects('frontend')" class="btn btn-primary" style="text-align: center;">Frontend</button>
+      <button onclick="filterProjects('backend')" class="btn btn-primary">Backend</button>
+    </div>
+    <div class="project-grid">
+
+      <div class="project-card" data-type="backend">
+        <a href="https://github.com/AdityaVajale/UniTrack.git">
+          <h3 class="project-title">UniTrack System</h3>
+        </a>
+        <p>UniTrack is a web-based application designed to streamline student and academic management.
+          It features separate modules for attendance tracking, assignment submissions, and academic records, enabling
+          faculty to manage data efficiently and students to access information easily. Built with Spring Boot for the
+          backend and Angular for the frontend, it ensures a responsive and user-friendly interface.</p>
+      </div>
+
+      <div class="project-card" data-type="frontend">
+        <a href="https://github.com/AdityaVajale/Login_Register-Angular-to-backend-connection-.git">
+          <h3 class="project-title">Dashive</h3>
+        </a>
+        <p>Dashive Employee Tracker is a responsive web application frontend built with Angular for managing employee
+          data efficiently. It provides features like task assignment, status tracking, and conditional styling for
+          deadlines.
+          The intuitive interface ensures easy navigation and a smooth user experience.</p>
+      </div>
+    </div>
+
+    <script>
+
+      function filterProjects(type) {
+        const projects = document.querySelectorAll(".project-card");
+        projects.forEach(p => {
+          if (p.getAttribute("data-type") === type || type === "all") {
+            p.style.display = "block";
+          }
+          else {
+            p.style.display = "none";
+          }
+        });
+      }
+    </script>
+    
+  </section>
+  <br>
+  <!--image hero imger-->
+
+
+  <div id="contact" class="Contact-form">
+    <h1>Contact Me:</h1>
+    <form action="https://formspree.io/f/mpwlqljl" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <input type="text" name="message"></input>
+      </label>
+      <br>
+      <button type="submit" style="border-radius: 3px;"
+        class="btn btn-success">Send</button><!--  your other form fields go here -->
+  </div>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:adityavajale6@gmail.com">adityavajale6@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+    <img src="linkedin.png" style="width:20px;border-radius:8px;"><a href="https://linkedin.com/in/adityavajale">
+      LinkedIn</a>
+    <br>
+    <img src="github.png" style="width: 20px;border-radius:8px;">
+    <a href="https://github.com/adityavajale">GitHub</a>
+  </div>
+  </form>
+  <br>
+  <footer class="footer">
+    <p>&copy; 2025 <a href="AdityaVajale.html">Aditya Vajale Portfolio.</a> All Rights Reserved.</p>
+  </footer>
+
+  </section>
+
+
+</body>
+
+</html
